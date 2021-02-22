@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: helvetica;
+    scroll-behavior: smooth;
+}
+
+/* constants */
+
+h4{
+    text-align: center;
+}
+
+
+
+/*-------------
+    navbar     
+-------------*/
+
+.navbar-brand span{
+    color: crimson;
+}
+
+.nav-link{
+    margin-right: 20px;
+}
+/*-------------
+   section 1     
+-------------*/
+
+
+
+.section1-text{
+    margin-bottom: 20px;
+}
+
+.section1-content{
+    margin-bottom: -80px;
+}
+.section1-btn{
+    text-align: center;
+    transform: translate(0,-50%);
+}
+
+.background-bottom{
+    position: relative;
+    z-index: -1;
+}
+
+/*-------------
+   section 2     
+-------------*/
+
+.section2-header{
+    padding: 50px 0;
+}
+
+.section2-header h4{
+    margin-bottom: 0;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.section2-header h4:hover{
+    color: #0099ff;
+}
+
+.section2-header h4::before{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%);
+    transition: 0.5s;
+}
+.section2-header h4:hover::before{
+    width: 50px;
+}
+.section2-header h4:hover::after{
+    width: 50px;
+}
+
+.section2-header h4::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: 0.5s;
+}
+
+/*-------------
+   section 3     
+-------------*/
+
+
+.section3-header{
+    padding: 50px 0;
+}
+.section3-header h4{
+    margin-bottom: 0;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.section3-header h4:hover{
+    color: #0099ff;
+}
+
+.section3-header h4::before{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%);
+    transition: 0.5s;
+}
+.section3-header h4:hover::before{
+    width: 50px;
+}
+.section3-header h4:hover::after{
+    width: 50px;
+}
+
+.section3-header h4::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: 0.5s;
+}
+
+.hidden-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+}
+.hidden-text:hover{
+    background-color: #0099ff;
+}
+.hidden-text:hover a{
+    color: whitesmoke;
+}
+.hidden-text a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.project{
+    position: relative;
+    cursor: pointer;
+}
+
+.project img{
+    transition: 0.5s;
+    box-shadow: 0 2px 4px #000000;
+}
+
+.project:hover img{
+    opacity: 0.5;
+}
+.project:hover .hidden-text{
+    opacity: 1;
+}
+
+
+/*-------------
+   section 4     
+-------------*/
+
+
+.section4-header{
+    padding: 50px 0;
+}
+.section4-header h4{
+    margin-bottom: 0;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.section4-header h4:hover{
+    color: #0099ff;
+}
+
+.section4-header h4::before{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%);
+    transition: 0.5s;
+}
+.section4-header h4:hover::before{
+    width: 50px;
+}
+.section4-header h4:hover::after{
+    width: 50px;
+}
+
+.section4-header h4::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #0099ff;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: 0.5s;
+}
+
+/* form styling */
+.left-side{
+    padding: 0 50px;
+}
+input{
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+}
+.name,
+.mail{
+    margin: 0;
+}
+.form-line{
+    margin: 20px 0;
+    margin-top: 0;
+}
+textarea{
+    padding: 5px;
+    border-radius: 5px 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+/*-------------
+    footer     
+-------------*/
+
+footer{
+    margin-top: 50px;
+}
+
+
+
+/* responsive */
+
+@media (max-width: 768px){
+    /*-------------
+       section 1     
+    -------------*/
+    .section1-content{
+        margin-bottom: -15px;
+    }
+    .section1-text{
+        text-align: center;
+    }
+}
