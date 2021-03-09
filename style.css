@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --light-blue: #7E76F9;
+    --dark-blue: #483bf7;
+    --light-gray: #42495B;
+    --very-light-gray: #7A839E;
+    --shadow: #7E76F9;
+}
+
+/* constants */
+
+.container{
+    padding: 50px 100px;
+}
+
+@media (max-width: 800px){
+    .container{
+        padding: 50px;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        padding: 50px 25px;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    min-height: 100vh;
+}
+
+.btn{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px 0;
+}
+.btn a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 12px 30px;
+    min-width: 150px;
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px var(--shadow);
+    text-transform:capitalize;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn a:hover{
+    background-color: var(--dark-blue);
+    top: -10px;
+}
+
+h1{
+    color: var(--light-gray);
+    font-size: 44px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+h2{
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--light-gray);
+}
+
+p{
+    color: var(--very-light-gray);
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+/* end constants */
+
+body{
+    min-width: 375px;
+    max-width: 1500px;
+}
+
+/* --------- first section --------- */
+/* header */
+
+.hero{
+    background-image: url(./images/header\ bg.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    font-size: 44px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header .logo span{
+    color: crimson;
+}
+
+.header .bar-icon{
+    display: none;
+}
+
+.header ul{
+    display: flex;
+    align-items: center;
+}
+
+.header ul li{
+    margin-right: 50px;
+}
+
+.header ul li a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header ul li a::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+
+.header ul li a:hover::after{
+    width: 100%;
+}
+
+/* end header */
+/* main */
+
+.content{
+    display: flex;
+    align-items: center;
+}
+
+.content .left-box{
+    display: flex;
+    align-items: center;
+}
+
+.content .left-box ul{
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.content .left-box ul::after{
+    content: "";
+    width: 3px;
+    height: 50px;
+    background-color: var(--light-blue);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 25px;
+}
+
+.content .left-box ul li{
+    margin: 25px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.content .left-box ul li a{
+    font-size: 18px;
+    color: var(--light-blue);
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transition: 0.5s;
+}
+
+.content .left-box ul li a:hover{
+    color: var(--dark-blue);
+    top: -5px;
+}
+
+.content .right-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .right-box .img-box {
+    width: 50%;
+}
+
+.content .right-box .img-box img{
+    max-width: 600px;
+    width: 100%;
+}
+
+/* end main */
+
+/* ----x---- first section ----x---- */
+
+
+
+
+/* --------- second section --------- */
+
+#about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    width: 50%;
+    box-shadow: 0 5px 10px var(--shadow);
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.left img{
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+.right{
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 70px;
+}
+
+.right h2{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.right p{
+    text-transform: inherit;
+}
+
+/* ----x---- second section ----x---- */
+
+/* --------- third section --------- */
+
+
+
+#portfolio .header{
+    margin-bottom: 100px;
+}
+
+#portfolio .header h2{
+    text-transform: capitalize;
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    justify-content: space-evenly;
+}
+
+.portfolio-content .project{
+    width: 600px;
+    height: 300px;
+    box-shadow: 0 5px 10px var(--shadow);
+    position: relative;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.portfolio-content .project .link a{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(0,-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+
+.portfolio-content .project img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.portfolio-content .project:hover a img{
+    top: -50px;
+}
+
+
+/* ----x---- third section ----x---- */
+
+/* --------- fourth section --------- */
+
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    min-height: auto;
+    padding: 50px 0;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 50px;
+    box-shadow: 0 5px 10px var(--shadow);
+}
+
+#contact .content .header{
+    margin-bottom: 50px;
+}
+
+#contact .content .header h2{
+    text-transform: capitalize;
+}
+
+#contact .content ul li{
+    margin: 20px 0;
+}
+
+#contact .content ul li a{
+    font-size: 20px;
+    color: var(--very-light-gray);
+    font-weight: 600;
+}
+
+/* ----x---- fourth section ----x---- */
+
+
+
+/* responsive media queries */
+
+/* ------- min width -- */
+
+@media (min-width: 1300px){
+    .content .right-box{
+        justify-content: space-evenly;
+    }
+    #about-me{
+        justify-content: space-evenly;
+    }
+}
+
+/* ---x--- min width -- */
+
+/* ------- max width -- */
+
+
+/* responsive projects */
+
+@media (max-width: 1400px){
+    .portfolio-content .project{
+        width: 500px;
+        height: 250px;
+    }
+}
+@media (max-width: 1250px){
+    .portfolio-content .project{
+        width: 450px;
+        height: 250px;
+    }
+}
+@media (max-width: 1100px){
+    .portfolio-content .project{
+        width: 400px;
+        height: 200px;
+    }
+}
+@media (max-width: 950px){
+    .portfolio-content{
+        grid-template-columns: auto;
+    }
+    .portfolio-content .project{
+        width: 500px;
+        height: 250px;
+    }
+}
+@media (max-width: 600px){
+    .portfolio-content .project{
+        width: 450px;
+        height: 250px;
+    }
+}
+@media (max-width: 500px){
+    .portfolio-content .project{
+        width: 350px;
+        height: 200px;
+    }
+}
+@media (max-width: 400px){
+    .portfolio-content .project{
+        width: 300px;
+        height: 180px;
+    }
+}
+
+/* end responsive projects */
+
+
+
+@media (max-width: 1200px){
+    .hero{
+        background-size: 70vw;
+    }
+}
+@media (max-width: 1000px){
+    /* --------- first section --------- /* 
+    /* header */
+
+    .header ul{
+        position: absolute;
+        top: -100%;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--light-blue);
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 1;
+    }
+
+    .header ul li{
+        margin: 50px 0;
+    }
+
+    .header ul li a{
+        font-size: 24px;
+    }
+
+    .header ul.active{
+        top: 0;
+    }
+    .header .bar-icon{
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .header .bar-icon i{
+        font-size: 34px;
+        color: white;
+    }
+    .header .bar-icon i:nth-child(2){
+        display: none;
+    }
+    .header .bar-icon.active i:nth-child(1){
+        display: none;
+    }
+    .header .bar-icon.active i:nth-child(2){
+        display: block;
+    }
+
+    /* end header */
+    /* main */
+
+    .content .right-box{
+        flex-direction: column-reverse;
+    }
+    .content .right-box .text-box{
+        text-align: center;
+
+    }
+    .content .right-box .text-box .btn{
+        width: 100%;
+    }
+    .content .right-box .text-box .btn a{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .content .right-box .img-box{
+        width: 50%;
+    }
+    .content .right-box .img-box img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* end main */
+
+    /* ----x---- first section ----x---- */
+
+
+    /* --------- second section --------- */
+
+    #about-me{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left{
+        margin: 0;
+        margin-bottom: 50px;
+        width: 75%;
+    }
+    .right{
+        text-align: center;
+        width: 75%;
+        margin: 0;
+    }
+    
+    .right .btn a{
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
+    /* ----x---- second section ----x---- */
+}
+
+@media (max-width: 600px){
+    #contact .content{
+        width: 90%;
+    }
+}
+
+@media (max-width: 575px){
+    /* --------- first section --------- */
+
+    .content .left-box ul{
+        margin-right: 25px;
+    }
+    .content .right-box .text-box{
+        width: 75%;
+    }
+    .content .right-box .img-box{
+        width: 75%;
+    }
+
+    /* ----x---- first section ----x---- */
+
+    /* --------- second section --------- */
+    
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+
+    /* ----x---- second section ----x---- */
+
+}
+
+/* ---x--- max width -- */
+
+
