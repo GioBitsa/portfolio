@@ -19,6 +19,8 @@
 /* constants */
 
 .container{
+    max-width: 1300px;
+    margin: 0 auto;
     padding: 50px 100px;
 }
 
@@ -94,7 +96,6 @@ p{
 
 body{
     min-width: 375px;
-    max-width: 1500px;
 }
 
 /* --------- first section --------- */
