@@ -473,6 +473,8 @@ main{
     transition: 0.5s;
     opacity: 0;
     transform: translateY(-10px);
+    text-align: center;
+    line-height: 1.5rem;
 }
 
 .item .overpage .links{
