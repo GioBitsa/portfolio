@@ -1,0 +1,918 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+    /* font-family: 'Pacifico', cursive; */
+}
+
+:root{
+    --light-gray: #c5c5c5;
+    --almost-gray: #7c7c7c;
+    --almost-black: #333;
+}
+
+/* constant */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+section{
+    padding: 20px 0;
+}
+
+.view-more{
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 50px;
+    font-weight: 700;
+    background-color: var(--almost-black);
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    border: 2px solid var(--almost-black);
+    transition: 0.3s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.view-more:hover{
+    background-color: white;
+    color: var(--almost-black);
+}
+
+.background-wrapper{
+    background-image: url(./images/background-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    z-index: -10;
+}
+
+.background-wrapper::before{
+    background-color: rgba(0,0,0,.65);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -5;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 7.5rem;
+    transition: all 0.5s;
+}
+
+/* header scrolling */
+
+.hero header.scrolling{
+    background-color: white;
+    padding: 1.5rem 7.5rem;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 50%);
+    z-index: 1;
+}
+
+.hero header.scrolling .logo{
+    color: var(--almost-black);
+}
+
+.hero header.scrolling ul li a{
+    color: var(--almost-black);
+}
+.hero header.scrolling ul li a::after{
+    background-color: black;
+}
+.hero header.scrolling #open{
+    color: black;
+}
+
+/* end of header scrolling */
+
+.hero header .logo{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.hero header ul li {
+    display: inline-block;
+    margin-right: 2.5rem;
+}
+
+.hero header ul li a{
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.hero header ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.hero header ul li a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+.sidebar{
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#close{
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* main */
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
+
+.social{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.social::before{
+    content: "";
+    width: 1px;
+    height: 60px;
+    background-color: var(--light-gray);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.social i{
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    color: var(--light-gray);
+}
+
+.social i:hover{
+    color: white;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,.7);
+}
+
+.content h1{
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.content p{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    position: relative;
+}
+
+.content p::before,
+.content p::after{
+    content: "";
+    width: 20%;
+    height: 2px;
+    background-color: var(--light-gray);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+
+.content p::after{
+    left: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 30px;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--almost-black);
+    transition: 0.3s;
+}
+
+.btn:hover{
+    color: black;
+}
+
+.scroll-down{
+    transform: rotate(90deg);
+    position: relative;
+    cursor: pointer;
+}
+
+.scroll-down a{
+    color: var(--light-gray);
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.scroll-down::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: var(--light-gray);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -100%);
+    margin-left: 10px;
+    animation-name: scroll-down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.mouse{
+    font-size: 1.1rem;
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: mouse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform: translate(0,-250%);
+}
+
+
+
+/* about me section */
+
+#about-me{
+    width: 100%;
+    text-align: center;
+}
+.top{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.header h2{
+    font-size: 31px;
+    color: var(--almost-black);
+    position: relative;
+}
+
+.header h2::after{
+    content: "\25BC";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header p{
+    margin-top: 50px;
+    color: #7c7c7c;
+    font-size: 13px;
+}
+.handwriting{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 41px;
+    font-family: 'Pacifico', cursive;
+}
+
+.top .about-text{
+    color: var(--almost-black);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 50px;
+    line-height: 1.1rem;
+    text-align:center;
+}
+
+.bottom{
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom .left,
+.bottom .right {
+    width: 40%; 
+}
+
+.progress{
+    margin: 50px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-weight: 700;
+}
+.progress ::after,
+.progress ::before{
+    content: "";
+    display: block;
+    background-color: var(--light-gray);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.progress ::after{
+    width: 80%;
+    background-color: var(--almost-black);
+}
+.progress span{
+    color: var(--almost-black);
+}
+
+
+/* controll percentages */
+
+#html ::after{
+    width: 85%;
+}
+#css ::after{
+    width: 85%;
+}
+#bootstrap ::after{
+    width: 80%;
+}
+#jquery ::after{
+    width: 70%;
+}
+#scss ::after{
+    width: 60%;
+}
+#react ::after{
+    width: 30%;
+}
+
+/* animation class - animated progress bar */
+
+.animate-html ::after{
+    animation-name: progress-html;
+    animation-duration: 2s;
+}
+.animate-css ::after{
+    animation-name: progress-css;
+    animation-duration: 2s;
+}
+.animate-bootstrap ::after{
+    animation-name: progress-bootstrap;
+    animation-duration: 2s;
+}
+.animate-jquery ::after{
+    animation-name: progress-jquery;
+    animation-duration: 2s;
+}
+.animate-scss ::after{
+    animation-name: progress-scss;
+    animation-duration: 2s;
+}
+.animate-react ::after{
+    animation-name: progress-react;
+    animation-duration: 2s;
+}
+
+
+
+/* portfolio section */
+
+
+.projects{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item {
+    margin: 10px;
+    width: 450px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+}
+
+.item .overpage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 5px solid #DCDCDC;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .overpage p{
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-10px);
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.item .overpage .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+
+.item .overpage .links a{
+    display: block;
+    margin: 0 10px;
+    padding: 7px 9px;
+    border-radius: 50%;
+    background-color: #202020;
+    border: 1px solid #202020;
+    color: 	white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: 0.3s;
+}
+
+.item .overpage .links a:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.item:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.item:hover .overpage{
+    opacity: 1;
+}
+.item:hover .overpage p,
+.item:hover .overpage .links{
+    transform: translateY(0);
+    opacity: 1;
+}
+.item:hover img{
+    opacity: 0;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+
+/* contact section */
+
+
+#contact .bottom{
+    margin: 100px 0;
+}
+
+#contact .bottom .contact-items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.contact-items .column i{
+    padding: 20px;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    transition: 0.3s;
+}
+
+.contact-items .column h3{
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.contact-items .column p{
+    color: #748182;
+}
+
+.contact-items .column:hover i{
+    background-color: #1c1c1c;
+    color: white;
+}
+
+
+/* footer section */
+
+
+footer{
+    padding: 25px 0;
+    background-color: #1c1c1c;
+}
+
+.text-content{
+    text-align: center;
+    color: #748182;
+}
+
+
+
+
+
+
+/* responsive media */
+
+@media screen and (max-width: 950px){
+    .hero header.scrolling{
+        padding: 1.5rem 5rem;
+    }
+    .hero main{
+        padding: 0 30px;
+    }
+    .hero ul{
+        width: 40%;
+        height: 100vh;
+        opacity: 0;
+        text-align: center;
+        background-color: #1c1c1c;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding: 2.5rem;
+        padding-top: 5rem;
+        transform: translate(-50%,0);
+        transition: 0.5s;
+        z-index: -10;
+    }
+
+    .hero header ul li{
+        margin-right: 0;
+        margin: 40px auto;
+    }
+    .hero header ul.opened li a{
+        color: white;
+    }
+    .hero ul.opened{
+        transform: translateX(-100%);
+        opacity: 1;
+        z-index: 10;
+    }
+    #open.opened{
+        display: none;
+    }
+    #close.opened{
+        display: block;
+    }
+    .hero .sidebar{
+        display: block;
+    }
+    .hero header{
+        padding: 2.5rem 5rem;
+    }
+    .hero .content{
+        transform: translateX(30px);
+    }
+    .hero .content h2{
+        font-size: 22px;
+    }
+    .hero .content h1{
+        font-size: 44px;
+    }
+    .hero .content p{
+        font-size: 11px;
+    }
+    .hero .btn{
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    .scroll-down a{
+        font-size: 11px;
+    }
+    #about-me .bottom{
+        flex-direction: column;
+    }
+    #about-me .bottom .left,
+    #about-me .bottom .right{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #contact .bottom{
+        margin: 50px 0;
+    }
+    .contact-items{
+        flex-direction: column;
+    }
+    .contact-items .column{
+        margin: 20px 0;
+    }
+    .text-content{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .top .about-text{
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .hero ul{
+        width: 60%;
+    }
+    .hero header{
+        padding: 2.5rem 2rem;
+    }
+    .hero header.scrolling{
+        padding: 1.5rem 2rem;
+    }
+    .hero .content{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    .hero .content p::before,
+    .hero .content p::after{
+        display: none;
+    }
+    .hero .content h2{
+        font-size: 19px;
+    }
+    .hero .content h1{
+        font-size: 41px;
+    }
+    .hero .content p{
+        font-size: 10px;
+    }
+    .hero .btn{
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    .scroll-down{
+        display: none;
+    }
+    .social{
+        position: absolute;
+        transform: rotate(90deg);
+        top: 50%;
+        left: 50%;
+    }
+    .social i{
+        transform: rotate(-90deg);
+    }
+    .social::before{
+        display: none;
+    }
+    .top .header{
+        width: 100%;
+        padding: 0 20px;
+    }
+    #about-me .bottom{
+        padding: 0 50px;
+    }
+    #about-me .bottom .left,
+    #about-me .bottom .right{
+        width: 100%;
+    }
+    .text-content{
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animations */
+
+@keyframes scroll-down{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+@keyframes mouse{
+    0%{
+        transform: translateY(-200%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(-150%);
+    }
+    75%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes progress-html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes progress-css{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes progress-bootstrap{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes progress-jquery{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes progress-scss{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes progress-react{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 30%;
+    }
+}
+
+
+
